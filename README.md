@@ -47,7 +47,7 @@ Enjoy the convenience of having your favorite meals delivered straight to your d
 - See order details
 - Update order stauts
 
-## Palette Colors
+## 🎨 Palette Colors
 
 <table>
    <!-- First Row -->
