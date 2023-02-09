@@ -84,4 +84,4 @@ Enjoy the convenience of having your favorite meals delivered straight to your d
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE FILE](https://github.com/Vicentesve/food_delivery/blob/master/LICENSE) for details.
