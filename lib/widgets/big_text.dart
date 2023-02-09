@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:food_delivery/utils/dimensions.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BigText extends StatelessWidget {
   final String text;
@@ -21,7 +21,7 @@ class BigText extends StatelessWidget {
       overflow: overFlow,
       maxLines: 1,
       style: TextStyle(
-        fontSize: Dimensions.getHeight(size),
+        fontSize: size.sp,
         color: color,
         fontWeight: FontWeight.w400,
         fontFamily: 'Roboto',

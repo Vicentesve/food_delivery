@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
-
-import '../utils/dimensions.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SmallText extends StatelessWidget {
   final String text;
@@ -21,7 +20,7 @@ class SmallText extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-        fontSize: Dimensions.getHeight(size),
+        fontSize: size.sp,
         color: color,
         fontFamily: 'Roboto',
         height: height,
