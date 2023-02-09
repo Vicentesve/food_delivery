@@ -13,8 +13,21 @@ Enjoy the convenience of having your favorite meals delivered straight to your d
    - If not, kindly follow the instructions provided by clicking on this [link](https://docs.flutter.dev/get-started/install).
 2. Clone the Repository: Open a terminal window and run the following command to clone the repository to your local machine:
 
-   ```shell
+   ```
    $ git clone https://github.com/Vicentesve/food_delivery.git
+   ```
+
+3. Install Dependencies: Navigate to the project directory and run the following command to install all necessary dependencies:
+   ```
+   $ flutter packages get
+   ```
+4. Launch the app: Connect your Android device or launch the Android emulator. Then run the following command to launch the app:
+   ```
+   $ flutter run
+   ```
+5. Running the Tests: To run the tests for the project, use the following command:
+   ```
+   $ flutter test
    ```
 
 ## 🔧 Major Features
@@ -33,6 +46,17 @@ Enjoy the convenience of having your favorite meals delivered straight to your d
 - Create new produts on the backend
 - See order details
 - Update order stauts
+
+## 📷 Screenshots
+
+## 💻 Tech Stack
+
+- [Flutter SDK](https://flutter.dev/): A cross-platform development framework for building high-performance, visually appealing, and responsive mobile applications.
+- [Dart Programming Language](https://dart.dev/): The programming language used to build Flutter apps.
+- [Firebase](https://firebase.google.com): A popular backend-as-a-service platform that can be used to store and retrieve data, authenticate users, and perform various other backend tasks.
+- [Visual Studio Code](https://code.visualstudio.com/): An Integrated Development Environment (IDE) used for writing and debugging code.
+- [Git](https://git-scm.com/): A version control system used to manage the source code of the project.
+- [GitHub](https://github.com/): A platform for hosting and sharing Git repositories.
 
 ## 📚 Lerned Topics
 
@@ -58,13 +82,6 @@ Enjoy the convenience of having your favorite meals delivered straight to your d
 - Turn the mobile app into a web app
 - Publish the app in the app store
 
-This project is a starting point for a Flutter application.
+## License
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
