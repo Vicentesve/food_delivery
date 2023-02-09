@@ -110,7 +110,7 @@ Enjoy the convenience of having your favorite meals delivered straight to your d
 - [Git](https://git-scm.com/): A version control system used to manage the source code of the project.
 - [GitHub](https://github.com/): A platform for hosting and sharing Git repositories.
 
-## 📚 Lerned Topics
+## 📚 Learned Topics
 
 - Step-by-step, complete 12 UI screens (Front-End, zero to hero)
 - Animated PageView
