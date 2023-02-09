@@ -14,20 +14,20 @@ Enjoy the convenience of having your favorite meals delivered straight to your d
 2. Clone the Repository: Open a terminal window and run the following command to clone the repository to your local machine:
 
    ```
-   $ git clone https://github.com/Vicentesve/food_delivery.git
+    git clone https://github.com/Vicentesve/food_delivery.git
    ```
 
 3. Install Dependencies: Navigate to the project directory and run the following command to install all necessary dependencies:
    ```
-   $ flutter packages get
+    flutter packages get
    ```
 4. Launch the app: Connect your Android device or launch the Android emulator. Then run the following command to launch the app:
    ```
-   $ flutter run
+    flutter run
    ```
 5. Running the Tests: To run the tests for the project, use the following command:
    ```
-   $ flutter test
+    flutter test
    ```
 
 ## 🔧 Major Features
