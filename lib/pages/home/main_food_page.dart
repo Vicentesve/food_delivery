@@ -36,6 +36,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                         SmallText(
                           text: 'City',
                           color: Colors.black54,
+                          size: 15,
                         ),
                         Icon(Icons.arrow_drop_down_rounded)
                       ],

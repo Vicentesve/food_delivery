@@ -1,12 +1,17 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_delivery/models/popular_product_model.dart';
+import 'package:food_delivery/utils/app_constants.dart';
 import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/widgets/app_column_food.dart';
 import 'package:food_delivery/widgets/big_text.dart';
 import 'package:food_delivery/widgets/icon_and_text.dart';
 import 'package:food_delivery/widgets/small_text.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
+
+import '../../controllers/popular_product_controller.dart';
 
 class FoodPageBody extends StatefulWidget {
   const FoodPageBody({super.key});
@@ -42,26 +47,35 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          height: 320.h,
-          child: PageView.builder(
-              controller: pageController,
-              itemCount: 5,
-              itemBuilder: (context, position) {
-                return _buildPageItem(position);
-              }),
-        ),
-        DotsIndicator(
-          dotsCount: 5,
-          position: _currPageVal,
-          decorator: DotsDecorator(
-            activeColor: AppColors.mainColor,
-            size: Size.square(9.0.r),
-            activeSize: Size(18.0.w, 9.0.h),
-            activeShape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5).r),
-          ),
-        ),
+        GetBuilder<PopularProductController>(builder: (popularProducts) {
+          return SizedBox(
+            height: 320.h,
+            child: PageView.builder(
+                controller: pageController,
+                itemCount: popularProducts.popularProductList.isEmpty
+                    ? 5
+                    : popularProducts.popularProductList.length,
+                itemBuilder: (context, position) {
+                  return _buildPageItem(
+                      position, popularProducts.popularProductList[position]);
+                }),
+          );
+        }),
+        GetBuilder<PopularProductController>(builder: (popularProducts) {
+          return DotsIndicator(
+            dotsCount: popularProducts.popularProductList.isEmpty
+                ? 5
+                : popularProducts.popularProductList.length,
+            position: _currPageVal,
+            decorator: DotsDecorator(
+              activeColor: AppColors.mainColor,
+              size: Size.square(9.0.r),
+              activeSize: Size(18.0.w, 9.0.h),
+              activeShape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5).r),
+            ),
+          );
+        }),
         Gap(30.h),
         Container(
           margin: EdgeInsets.only(left: 30.w),
@@ -162,7 +176,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     );
   }
 
-  Widget _buildPageItem(int index) {
+  Widget _buildPageItem(int index, ProductModel popularProduct) {
     Matrix4 matrix = Matrix4.identity();
 
     if (index == _currPageVal.floor()) {
@@ -200,9 +214,10 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 color: index.isEven
                     ? const Color(0xff69c5df)
                     : const Color(0xff9294cc),
-                image: const DecorationImage(
+                image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage('assets/image/food0.png'),
+                  image: NetworkImage(
+                      '${AppConstants.BASE_URL}/uploads/${popularProduct.img!}'),
                 )),
           ),
           Align(
@@ -220,8 +235,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               ], borderRadius: BorderRadius.circular(20), color: Colors.white),
               child: Container(
                 padding: EdgeInsets.only(top: 15.h, left: 15.w, right: 15.w),
-                child: const AppColumnFood(
-                  nameFood: 'Chinese Side',
+                child: AppColumnFood(
+                  nameFood: popularProduct.name.toString(),
+                  stars: popularProduct.stars!.toInt(),
                 ),
               ),
             ),

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/widgets/app_icon.dart';
 import 'package:food_delivery/widgets/big_text.dart';
+import 'package:food_delivery/widgets/expandable_text.dart';
 import 'package:gap/gap.dart';
 import '../../widgets/app_column_food.dart';
 
@@ -59,9 +60,18 @@ class PopularFoodDetail extends StatelessWidget {
                 children: [
                   const AppColumnFood(
                     nameFood: 'Chinese Side',
+                    stars: 5,
                   ),
                   Gap(20.h),
                   const BigText(text: 'Introduce'),
+                  Gap(20.h),
+                  const Expanded(
+                    child: SingleChildScrollView(
+                      child: ExpandableText(
+                          text:
+                              'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'),
+                    ),
+                  )
                 ],
               ),
             ),
@@ -70,17 +80,18 @@ class PopularFoodDetail extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
         padding: EdgeInsets.symmetric(vertical: 30.h, horizontal: 20.h),
-        height: 120.h,
+        height: 100.h,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10.r),
-              topRight: Radius.circular(10.r),
+              topLeft: Radius.circular(15.r),
+              topRight: Radius.circular(15.r),
             ),
             color: AppColors.buttonBackgroundColor),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
+              padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15.r),
@@ -99,6 +110,17 @@ class PopularFoodDetail extends StatelessWidget {
                     color: AppColors.signColor,
                   ),
                 ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.r),
+                color: AppColors.mainColor,
+              ),
+              child: const BigText(
+                text: '\$10 | Add to cart',
+                color: Colors.white,
               ),
             ),
           ],

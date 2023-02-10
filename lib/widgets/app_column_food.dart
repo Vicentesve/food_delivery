@@ -9,7 +9,8 @@ import 'icon_and_text.dart';
 
 class AppColumnFood extends StatelessWidget {
   final String nameFood;
-  const AppColumnFood({super.key, required this.nameFood});
+  final int stars;
+  const AppColumnFood({super.key, required this.nameFood, required this.stars});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class AppColumnFood extends StatelessWidget {
           children: [
             Wrap(
               children: List.generate(
-                  5,
+                  stars,
                   (index) => Icon(
                         Icons.star,
                         color: AppColors.mainColor,
@@ -33,7 +34,7 @@ class AppColumnFood extends StatelessWidget {
                       )),
             ),
             Gap(10.h),
-            const SmallText(text: '4.5'),
+            SmallText(text: stars.toString()),
             Gap(10.h),
             const SmallText(text: '1287 comments'),
           ],
