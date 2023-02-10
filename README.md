@@ -55,15 +55,15 @@ Enjoy the convenience of having your favorite meals delivered straight to your d
       <td>
       <img src="https://placehold.co/30x30/89dad0/89dad0.png" width="50" height="50" alt="mainColor" />
       </td>
-      <td><b>Main Color</b>
+      <td><b>Main Color<br/>#89DAD0</b>
       <td>
       <img src="https://placehold.co/10x10/ccc7c5/ccc7c5.png" width="50" height="50" alt="textColor" />
       </td>
-      <td><b>Text Color</b></td>
+      <td><b>Text Color<br/>#CCC7C5</b></td>
       <td>
       <img src="https://placehold.co/10x10/ffd28d/ffd28d.png" width="50" height="50" alt="iconColor1" />
       </td>
-      <td><b>Icon Color 1</b></td>
+      <td><b>Icon Color 1<br/>#FFD28D</b></td>
       
    </tr>
    <!-- Second Row -->
@@ -71,30 +71,30 @@ Enjoy the convenience of having your favorite meals delivered straight to your d
       <td>
       <img src="https://placehold.co/10x10/fcab88/fcab88.png" width="50" height="50" alt="iconColor2" />
       </td>
-      <td><b>Icon Color 2</b></td>
+      <td><b>Icon Color 2<br/>#FCAB88</b></td>
       <td>
       <img src="https://placehold.co/10x10/8f837f/8f837f.png" width="50" height="50" alt="paraColor" />
       </td>
-      <td><b>Para Color</b></td>
+      <td><b>Para Color<br/>#8F837F</b></td>
       <td>
       <img src="https://placehold.co/10x10/f7f6f4/f7f6f4.png" width="50" height="50" alt="buttonBG" />
       </td>
-      <td><b>Button Background</b></td>
+      <td><b>Button Background<br/>#F7F6F4</b></td>
    </tr>
    <!-- Third Row -->
    <tr>
       <td>
       <img src="https://placehold.co/10x10/a9a29f/a9a29f.png" width="50" height="50" alt="signColor" />
       </td>
-      <td><b>Sign Color</b></td>
+      <td><b>Sign Color<br/>#A9A29F</b></td>
       <td>
       <img src="https://placehold.co/10x10/5c524f/5c524f.png" width="50" height="50" alt="titleColor" />
       </td>
-      <td><b>Title Color</b></td>
+      <td><b>Title Color<br/>#5C524F</b></td>
       <td>
       <img src="https://placehold.co/10x10/332d2b/332d2b.png" width="50" height="50" alt="mainBlackColor" />
       </td>
-      <td><b>Main Black Color</b></td>
+      <td><b>Main Black Color<br/>#332D2B</b></td>
    </tr>
 
 </table>
