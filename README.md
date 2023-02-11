@@ -99,6 +99,16 @@ Enjoy the convenience of having your favorite meals delivered straight to your d
 
 </table>
 
+## 🖋️ Fonts
+
+- The following fonts are used in this project:
+
+1. **Inter Bold 700**: This font is used for headings
+2. **Inter Regular 400**: This font is used for body text
+
+- Source: [Source of the font](https://fonts.google.com/specimen/Inter/) 🔗
+- License: [License information](https://fonts.google.com/specimen/Inter/) 🔒
+
 ## 📷 Screenshots
 
 ## 💻 Tech Stack
