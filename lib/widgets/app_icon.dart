@@ -16,10 +16,14 @@ class AppIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.center,
       width: size,
       height: size,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(size! / 2).r, color: bgColor),
+        shape: BoxShape.circle,
+        //borderRadius: BorderRadius.circular(size! / 2).r,
+        color: bgColor,
+      ),
       child: Icon(
         icon,
         color: iconColor,

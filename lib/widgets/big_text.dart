@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BigText extends StatelessWidget {
   final String text;
@@ -20,11 +22,10 @@ class BigText extends StatelessWidget {
       text,
       overflow: overFlow,
       maxLines: 1,
-      style: TextStyle(
+      style: GoogleFonts.inter(
         fontSize: size.sp,
         color: color,
-        fontWeight: FontWeight.w400,
-        fontFamily: 'Roboto',
+        fontWeight: FontWeight.w700,
       ),
     );
   }

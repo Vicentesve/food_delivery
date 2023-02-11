@@ -39,6 +39,8 @@ dependencies:
   get: ^4.6.5
   gap: ^2.0.1
   flutter_screenutil: ^5.6.1
+  skeletons: ^0.0.3
+  google_fonts: ^4.0.3
 
 dev_dependencies:
   flutter_test:

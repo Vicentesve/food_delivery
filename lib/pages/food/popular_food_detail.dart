@@ -82,45 +82,65 @@ class PopularFoodDetail extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 30.h, horizontal: 20.h),
         height: 100.h,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(15.r),
-              topRight: Radius.circular(15.r),
-            ),
-            color: AppColors.buttonBackgroundColor),
+          border: Border(
+              top: BorderSide(
+            color: Colors.grey.shade300,
+            width: 1,
+          )),
+          color: Colors.grey.shade100,
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15.r),
-              ),
-              child: Row(
-                children: [
-                  const Icon(
-                    Icons.remove,
-                    color: AppColors.signColor,
-                  ),
-                  Gap(10.w),
-                  const BigText(text: '0'),
-                  Gap(10.w),
-                  const Icon(
-                    Icons.add,
-                    color: AppColors.signColor,
-                  ),
-                ],
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15.r),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Icon(
+                      Icons.remove,
+                      color: AppColors.signColor,
+                    ),
+                    BigText(
+                      text: '0',
+                      size: 16,
+                    ),
+                    Icon(
+                      Icons.add,
+                      color: AppColors.signColor,
+                    ),
+                  ],
+                ),
               ),
             ),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.r),
-                color: AppColors.mainColor,
-              ),
-              child: const BigText(
-                text: '\$10 | Add to cart',
-                color: Colors.white,
+            Gap(20.w),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15.r),
+                  color: AppColors.mainColor,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    BigText(
+                      text: 'Add',
+                      size: 16,
+                      color: Colors.white,
+                    ),
+                    BigText(
+                      text: '\$115.20',
+                      size: 16,
+                      color: Colors.white,
+                    )
+                  ],
+                ),
               ),
             ),
           ],

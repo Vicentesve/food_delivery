@@ -30,6 +30,9 @@ class _ExpandableTextState extends State<ExpandableText> {
       firstHalf = widget.text.substring(0, textHeight.toInt());
       secondHalf =
           widget.text.substring(textHeight.toInt(), widget.text.length);
+
+      print(firstHalf);
+      print(secondHalf);
     } else {
       firstHalf = widget.text;
       secondHalf = "";
@@ -44,32 +47,35 @@ class _ExpandableTextState extends State<ExpandableText> {
           : Column(
               children: [
                 SmallText(
+                    overFlow: TextOverflow.visible,
                     size: 15,
                     height: 1.4.h,
                     color: AppColors.paraColor,
                     text: hiddenText
-                        ? "$firstHalf..."
+                        ? "$firstHalf ..."
                         : '$firstHalf $secondHalf'),
-                Gap(5.h),
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      hiddenText = !hiddenText;
-                    });
-                  },
-                  child: Row(
-                    children: [
-                      SmallText(
-                        text: hiddenText ? "Show more" : 'Show less',
-                        color: AppColors.mainColor,
-                      ),
-                      Icon(
-                        hiddenText
-                            ? Icons.arrow_drop_down
-                            : Icons.arrow_drop_up,
-                        color: AppColors.mainColor,
-                      ),
-                    ],
+                Container(
+                  margin: EdgeInsets.symmetric(vertical: 10.h),
+                  child: InkWell(
+                    onTap: () {
+                      setState(() {
+                        hiddenText = !hiddenText;
+                      });
+                    },
+                    child: Row(
+                      children: [
+                        SmallText(
+                          text: hiddenText ? "Show more" : 'Show less',
+                          color: AppColors.mainColor,
+                        ),
+                        Icon(
+                          hiddenText
+                              ? Icons.arrow_drop_down
+                              : Icons.arrow_drop_up,
+                          color: AppColors.mainColor,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
